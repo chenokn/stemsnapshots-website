@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — STEMSnapshots",
@@ -27,13 +28,29 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
-            Information we collect
+            Information we collect from the app
           </h2>
           <p className="mt-2">
-            Our desktop apps do not collect, transmit, or store personal
-            information. Any settings or progress are saved locally on your
-            device only. If you contact us directly by email, we retain that
-            correspondence to respond to your message.
+            Digital Lab does not require an account, an internet connection,
+            or sign-in of any kind. It does not collect, transmit, or store
+            personal information on any server. Everything the app remembers
+            about your use of it — your discovered-elements progress, lesson
+            completion, view preferences, and other settings — is saved in a
+            local file on your own device and never leaves it. Uninstalling
+            the app removes this data.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Reference guide (PDF export)
+          </h2>
+          <p className="mt-2">
+            Digital Lab can generate a printable Element Reference Guide as a
+            PDF from inside the app. This file is created and saved entirely
+            on your device — nothing is uploaded or transmitted to produce
+            it, and we have no visibility into whether or how you use this
+            feature.
           </p>
         </section>
 
@@ -42,9 +59,76 @@ export default function PrivacyPage() {
             This website
           </h2>
           <p className="mt-2">
-            This website uses Vercel Analytics to understand aggregate traffic
-            (e.g. which pages are visited). It does not use cookies and does
-            not track individual visitors across sites.
+            This website uses Vercel Analytics to understand aggregate
+            traffic (e.g. which pages are visited and roughly how many
+            people visit). It does not use cookies, does not use tracking
+            pixels, and does not build a profile of individual visitors.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Feedback
+          </h2>
+          <p className="mt-2">
+            The feedback form on this site sends your message — and your
+            email address, if you choose to provide one for a reply — directly
+            to us via a transactional email provider (Resend). We don&rsquo;t
+            store submissions in a database; the message simply arrives in our
+            inbox like any other email. We use it only to read and respond to
+            your feedback, and we don&rsquo;t add you to any mailing list.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Third-party services
+          </h2>
+          <p className="mt-2">
+            We rely on a small number of service providers to run this
+            website and app, and each only sees what it needs to do its job:
+          </p>
+          <ul className="mt-2 list-disc space-y-1 pl-5">
+            <li>
+              <span className="font-medium text-slate-700 dark:text-slate-300">
+                Vercel
+              </span>{" "}
+              — hosts this website and provides aggregate traffic analytics.
+            </li>
+            <li>
+              <span className="font-medium text-slate-700 dark:text-slate-300">
+                Resend
+              </span>{" "}
+              — delivers messages submitted through the feedback form to our
+              inbox.
+            </li>
+          </ul>
+          <p className="mt-2">
+            We don&rsquo;t sell personal information, and we don&rsquo;t
+            share it with anyone for advertising purposes.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Children&rsquo;s privacy
+          </h2>
+          <p className="mt-2">
+            Digital Lab is built with students in mind, including middle and
+            high school classrooms. Because the app collects no personal
+            information from anyone — regardless of age — there is nothing
+            for us to gather, store, or share about a child using the app.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Changes to this policy
+          </h2>
+          <p className="mt-2">
+            If this policy changes, we&rsquo;ll update this page and revise
+            the date below. Since the app itself doesn&rsquo;t phone home,
+            the most current version always lives here on the website.
           </p>
         </section>
 
@@ -53,14 +137,14 @@ export default function PrivacyPage() {
             Contact
           </h2>
           <p className="mt-2">
-            Questions about this policy can be sent to{" "}
-            <a
-              href="mailto:janet.kim6013@gmail.com"
+            Questions about this policy can be sent through the{" "}
+            <Link
+              href="/#feedback"
               className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
             >
-              janet.kim6013@gmail.com
-            </a>
-            .
+              feedback form
+            </Link>{" "}
+            on our homepage.
           </p>
         </section>
       </div>

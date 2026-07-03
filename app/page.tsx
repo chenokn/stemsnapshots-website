@@ -109,7 +109,7 @@ export default function Home() {
                 Explore Digital Lab
               </a>
               <a
-                href="#contact"
+                href="#feedback"
                 className="rounded-xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-400 hover:text-slate-900 dark:border-white/15 dark:text-slate-200 dark:hover:border-white/30 dark:hover:text-white"
               >
                 Get in touch
@@ -335,7 +335,7 @@ export default function Home() {
       </section>
 
       {/* Feedback */}
-      <section className="border-t border-slate-200 dark:border-white/10">
+      <section id="feedback" className="border-t border-slate-200 dark:border-white/10">
         <div className="mx-auto max-w-2xl px-6 py-20">
           <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">
             Feedback

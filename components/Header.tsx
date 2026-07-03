@@ -26,10 +26,10 @@ export default function Header() {
             Digital Lab
           </Link>
           <Link
-            href="/#contact"
+            href="/#feedback"
             className="transition-colors hover:text-slate-900 dark:hover:text-white"
           >
-            Contact
+            Feedback
           </Link>
           <Link
             href="/privacy"
