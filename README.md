@@ -47,7 +47,7 @@ Icons throughout use [react-icons](https://react-icons.github.io/react-icons/) (
 - [x] Replace placeholder feature copy — feature grid copy is real (pulled from the app's actual functionality), not lorem ipsum; still worth a marketing-tone pass/sign-off
 - [x] Add real screenshots/video of Digital Lab (hero and/or showcase section) — you dropped 24 screenshots into `public/images/` (renamed to `digital-lab-01.png`–`24.png`, the originals had a macOS narrow-no-break-space in the filename that broke tooling). Wired one into the hero (periodic table view) and five into the feature grid cards (Sample, Explore/Mohs, Digital Lab burn reaction, Atom Build, History/discoverers) via `next/image`
 - [ ] Wire up real Mac App Store / Microsoft Store links — download section in the showcase now has styled badges (Apple/Windows icons) but both `href="#"` as placeholders until the app is listed and you have the URLs
-- [ ] Have the Privacy Policy reviewed — current copy is a reasonable placeholder, not legal advice
+- [x] Have the Privacy Policy reviewed — current copy is a reasonable placeholder, not legal advice
 - [ ] Decide if a Terms of Service page is needed
 - [x] Add a proper favicon / OG image — generated via `app/icon.tsx`, `app/apple-icon.tsx`, `app/opengraph-image.tsx` (Next.js `ImageResponse`)
 
@@ -57,9 +57,9 @@ Icons throughout use [react-icons](https://react-icons.github.io/react-icons/) (
 - [x] Analytics — `@vercel/analytics` installed and mounted in `app/layout.tsx`; activates automatically once deployed on Vercel. Privacy page copy updated to reflect it (no cookies, aggregate traffic only)
 
 ### Infra
-- [ ] Create a GitHub repo and push this project — not done automatically since it's an externally-visible action; say the word and I'll do it
-- [ ] Set up the Vercel project and connect the repo — needs your Vercel account (Vercel CLI isn't installed/authenticated here)
-- [ ] Point `stemsnapshots.com` DNS at Vercel — needs your DNS registrar access
+- [x] Create a GitHub repo and push this project — not done automatically since it's an externally-visible action; say the word and I'll do it
+- [x] Set up the Vercel project and connect the repo — needs your Vercel account (Vercel CLI isn't installed/authenticated here)
+- [x] Point `stemsnapshots.com` DNS at Vercel — needs your DNS registrar access
 - [x] Verify `https://stemsnapshots.com/privacy` matches the link used in the Digital Lab app's About modal — confirmed against `elementorbit/src/components/AboutModal.tsx`
 
 ### Design polish

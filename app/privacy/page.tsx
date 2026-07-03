@@ -82,6 +82,29 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Newsletter sign-up
+          </h2>
+          <p className="mt-2">
+            If you enter your email in the &ldquo;notify me&rdquo; box on
+            this site, we store that address with Resend (the same provider
+            that delivers our feedback emails) so we can send you launch
+            updates. This is a separate, explicit opt-in from the feedback
+            form — submitting feedback does not sign you up for anything, and
+            signing up for updates does not add you to any other list. Every
+            email we send includes an unsubscribe link, and you can ask us to
+            delete your address at any time through the{" "}
+            <Link
+              href="/#feedback"
+              className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+            >
+              feedback form
+            </Link>
+            .
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
             Third-party services
           </h2>
           <p className="mt-2">
@@ -100,7 +123,8 @@ export default function PrivacyPage() {
                 Resend
               </span>{" "}
               — delivers messages submitted through the feedback form to our
-              inbox.
+              inbox, and stores email addresses from the newsletter sign-up
+              so we can send launch updates.
             </li>
           </ul>
           <p className="mt-2">

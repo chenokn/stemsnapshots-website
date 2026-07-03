@@ -12,6 +12,7 @@ import {
 import type { IconType } from "react-icons";
 import ClickableScreenshot from "@/components/ClickableScreenshot";
 import FeedbackForm from "@/components/FeedbackForm";
+import NewsletterForm from "@/components/NewsletterForm";
 
 const FEATURES: {
   title: string;
@@ -251,6 +252,15 @@ export default function Home() {
                   Microsoft Store
                 </span>
               </span>
+            </div>
+          </div>
+
+          <div className="mt-8 max-w-md">
+            <p className="text-sm font-semibold text-slate-900 dark:text-white">
+              Not live yet — want to know the moment it is?
+            </p>
+            <div className="mt-3">
+              <NewsletterForm />
             </div>
           </div>
         </div>
