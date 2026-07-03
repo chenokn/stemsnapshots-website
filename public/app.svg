@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+
+  <defs>
+    <!-- Background gradient: deep navy center → near-black edge -->
+    <radialGradient id="bg" cx="50%" cy="44%" r="65%">
+      <stop offset="0%" stop-color="#1b1f45" />
+      <stop offset="100%" stop-color="#08091a" />
+    </radialGradient>
+
+    <!-- Nucleus sphere gradient -->
+    <radialGradient id="nuc" cx="36%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#f0f9ff" />
+      <stop offset="22%" stop-color="#bae6fd" />
+      <stop offset="58%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </radialGradient>
+
+    <!-- Ambient halo around nucleus -->
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.30" />
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Per-orbit stroke gradients -->
+    <linearGradient id="orb1stroke" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Electron soft-glow filter -->
+    <filter id="eg" x="-110%" y="-110%" width="320%" height="320%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Nucleus glow filter -->
+    <filter id="ng" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Icon shape clip (squircle-style rounded rect) -->
+    <clipPath id="icon-clip">
+      <rect width="1024" height="1024" rx="226" ry="226" />
+    </clipPath>
+  </defs>
+
+  <!-- ── Background ─────────────────────────────────────────── -->
+  <rect width="1024" height="1024" rx="226" fill="url(#bg)" />
+
+  <!-- Very subtle inner vignette highlight -->
+  <!-- <ellipse cx="512" cy="400" rx="380" ry="260"
+    fill="none" stroke="#ffffff" stroke-width="1"
+    opacity="0.04" /> -->
+
+  <!-- Nucleus ambient halo (large, very soft) -->
+  <circle cx="512" cy="512" r="484" fill="url(#halo)" />
+
+  <!-- ── Orbital rings + electrons ────────────────────────────
+       Each group is a copy of the same orbit (rx=454, ry=145)
+       rotated around centre (512,512) by 0°, 60°, -60°.
+       Electrons placed at t=45° and t=225° on the local ellipse:
+         t=45°:  (833, 410)   t=225°: (191, 614)
+  ──────────────────────────────────────────────────────────── -->
+
+  <!-- Orbit 1 — blue, 0° -->
+  <g>
+    <ellipse cx="512" cy="512" rx="454" ry="145"
+      fill="none" stroke="#60a5fa" stroke-width="10" opacity="0.65" />
+    <circle cx="833" cy="410" r="55" fill="#93c5fd" filter="url(#eg)" />
+    <circle cx="191" cy="614" r="55" fill="#93c5fd" filter="url(#eg)" />
+  </g>
+
+  <!-- Orbit 2 — purple, +60° -->
+  <g transform="rotate(60, 512, 512)">
+    <ellipse cx="512" cy="512" rx="454" ry="145"
+      fill="none" stroke="#a78bfa" stroke-width="10" opacity="0.65" />
+    <circle cx="833" cy="410" r="55" fill="#c4b5fd" filter="url(#eg)" />
+    <circle cx="191" cy="614" r="55" fill="#c4b5fd" filter="url(#eg)" />
+  </g>
+
+  <!-- Orbit 3 — teal, -60° -->
+  <g transform="rotate(-60, 512, 512)">
+    <ellipse cx="512" cy="512" rx="454" ry="145"
+      fill="none" stroke="#34d399" stroke-width="10" opacity="0.65" />
+    <circle cx="833" cy="410" r="55" fill="#6ee7b7" filter="url(#eg)" />
+    <circle cx="191" cy="614" r="55" fill="#6ee7b7" filter="url(#eg)" />
+  </g>
+
+  <!-- ── Nucleus ───────────────────────────────────────────── -->
+
+  <!-- Outer diffuse glow -->
+  <circle cx="512" cy="512" r="152" fill="#3b82f6" opacity="0.18" filter="url(#ng)" />
+
+  <!-- Sphere -->
+  <circle cx="512" cy="512" r="90" fill="url(#nuc)" filter="url(#ng)" />
+
+  <!-- Specular highlight (gives 3-D feel) -->
+  <ellipse cx="487" cy="478" rx="34" ry="23" fill="white" opacity="0.42" />
+
+  <!-- Tiny inner specular dot -->
+  <circle cx="481" cy="475" r="10" fill="white" opacity="0.55" />
+</svg>
