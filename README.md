@@ -56,7 +56,7 @@ Icons throughout use [react-icons](https://react-icons.github.io/react-icons/) (
 
 ### Features
 - [x] Newsletter/email capture — using Resend's Contacts/Segments API (`RESEND_NEWSLETTER_SEGMENT_ID`); form lives next to the App Store / Microsoft Store badges, framed as a launch notification
-- [ ] Blog or changelog for future STEMSnapshots apps — deferred; no content to publish yet, revisit when there's something to post
+- [ ] Blog or changelog for future STEMSnapshots apps — deferred; no content to publish yet, revisit when there's something to post. Added a YouTube link (footer) as a lighter-weight content channel in the meantime: https://www.youtube.com/@STEMSnapshots
 - [x] Analytics — `@vercel/analytics` installed and mounted in `app/layout.tsx`; activates automatically once deployed on Vercel. Privacy page copy updated to reflect it (no cookies, aggregate traffic only)
 
 ### Infra
