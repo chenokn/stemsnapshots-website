@@ -44,19 +44,25 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
-            PDF exports &amp; the reference guide (&ldquo;the book&rdquo;)
+            PDF exports &amp; the books
           </h2>
           <p className="mt-2">
-            Digital Lab can generate printable reference material from
-            inside the app — including the Element Reference Guide and
-            Compound Recipes guide (referred to informally as &ldquo;the
-            book&rdquo;) — as a PDF saved to your device. You&rsquo;re
-            welcome to print and use these for personal study or in a
-            classroom you teach. The content, layout, artwork, and data
-            compiled in these PDFs remain the property of STEMSnapshots; you
-            may not sell them, republish them (in print or online), or
-            distribute them outside your own classroom or household without
-            our written permission.
+            Digital Lab can generate two printable references from inside
+            the app: the{" "}
+            <span className="font-medium text-slate-700 dark:text-slate-300">
+              Wonder Table
+            </span>{" "}
+            (a complete reference guide to all 118 elements) and{" "}
+            <span className="font-medium text-slate-700 dark:text-slate-300">
+              Compound Recipes
+            </span>{" "}
+            (a study guide covering 186 compounds) — each exported as a PDF
+            saved to your device. You&rsquo;re welcome to print and use these
+            for personal study or in a classroom you teach. The content,
+            layout, artwork, and data compiled in these books remain the
+            property of STEMSnapshots; you may not sell them, republish them
+            (in print or online), or distribute them outside your own
+            classroom or household without our written permission.
           </p>
         </section>
 

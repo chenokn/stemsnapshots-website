@@ -43,14 +43,14 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
-            Reference guide (PDF export)
+            The books (PDF export)
           </h2>
           <p className="mt-2">
-            Digital Lab can generate a printable Element Reference Guide as a
-            PDF from inside the app. This file is created and saved entirely
-            on your device — nothing is uploaded or transmitted to produce
-            it, and we have no visibility into whether or how you use this
-            feature.
+            Digital Lab can generate two printable books from inside the
+            app — the Wonder Table (all 118 elements) and Compound Recipes
+            (186 compounds) — each saved as a PDF on your device. Nothing is
+            uploaded or transmitted to produce them, and we have no
+            visibility into whether or how you use this feature.
           </p>
         </section>
 
