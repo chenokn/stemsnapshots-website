@@ -20,16 +20,19 @@ npm run lint    # eslint
 
 ```
 app/
-  layout.tsx           Root layout, header/footer, metadata, Vercel Analytics
-  page.tsx             Home — hero, Digital Lab showcase, mission
+  layout.tsx           Root layout, header/footer, metadata, Vercel Analytics, theme-flash script
+  page.tsx             Home — hero, Digital Lab showcase, gallery, "Why Digital Lab", feedback
   privacy/page.tsx     Privacy policy (linked from the Digital Lab app's About modal)
-  icon.tsx             Favicon (32x32, generated via next/og ImageResponse)
-  apple-icon.tsx       iOS home-screen icon (180x180)
-  opengraph-image.tsx  Social share preview image (1200x630)
+  terms/page.tsx       Terms of Service
+  api/feedback/        POST route — sends feedback form submissions via Resend
+  api/newsletter/      POST route — upserts email into a Resend segment
+  icon.svg             Favicon — static file, the real Digital Lab app icon
+  apple-icon.png       iOS home-screen icon (180x180), rasterized from the same icon
+  opengraph-image.tsx  Social share preview image (1200x630, next/og ImageResponse)
 components/
-  Header.tsx
-  Footer.tsx
-  AtomMark.tsx          Animated atom SVG used in the hero
+  Header.tsx, Footer.tsx, ThemeToggle.tsx
+  FeedbackForm.tsx, NewsletterForm.tsx
+  ClickableScreenshot.tsx, Lightbox.tsx   Click-to-enlarge modal for screenshots
 ```
 
 Icons throughout use [react-icons](https://react-icons.github.io/react-icons/) (`react-icons/fa6`).
@@ -47,12 +50,12 @@ Icons throughout use [react-icons](https://react-icons.github.io/react-icons/) (
 - [x] Replace placeholder feature copy — feature grid copy is real (pulled from the app's actual functionality), not lorem ipsum; still worth a marketing-tone pass/sign-off
 - [x] Add real screenshots/video of Digital Lab (hero and/or showcase section) — you dropped 24 screenshots into `public/images/` (renamed to `digital-lab-01.png`–`24.png`, the originals had a macOS narrow-no-break-space in the filename that broke tooling). Wired one into the hero (periodic table view) and five into the feature grid cards (Sample, Explore/Mohs, Digital Lab burn reaction, Atom Build, History/discoverers) via `next/image`
 - [ ] Wire up real Mac App Store / Microsoft Store links — download section in the showcase now has styled badges (Apple/Windows icons) but both `href="#"` as placeholders until the app is listed and you have the URLs
-- [x] Have the Privacy Policy reviewed — current copy is a reasonable placeholder, not legal advice
-- [ ] Decide if a Terms of Service page is needed
-- [x] Add a proper favicon / OG image — generated via `app/icon.tsx`, `app/apple-icon.tsx`, `app/opengraph-image.tsx` (Next.js `ImageResponse`)
+- [x] Have the Privacy Policy reviewed — current copy is a reasonable placeholder, not legal advice; expanded to cover local app data, PDF/reference-guide exports, third-party services (Vercel, Resend), children's privacy, and the newsletter opt-in
+- [x] Decide if a Terms of Service page is needed — added at `/terms`, covering the app license, PDF/reference-guide ("the book") usage rights, website acceptable use, IP, warranty disclaimer, and liability limitation. Placeholder copy, not legal advice — have a lawyer review before relying on it
+- [x] Add a proper favicon / OG image — `app/icon.svg` and `app/apple-icon.png` are the real Digital Lab app icon (static files, not generated); `opengraph-image.tsx` embeds the same icon via `next/og` `ImageResponse`
 
 ### Features
-- [ ] Newsletter/email capture, if wanted — needs picking an email service (e.g. Resend, Buttondown, Mailchimp) and an API key before it can do anything real
+- [x] Newsletter/email capture — using Resend's Contacts/Segments API (`RESEND_NEWSLETTER_SEGMENT_ID`); form lives next to the App Store / Microsoft Store badges, framed as a launch notification
 - [ ] Blog or changelog for future STEMSnapshots apps — deferred; no content to publish yet, revisit when there's something to post
 - [x] Analytics — `@vercel/analytics` installed and mounted in `app/layout.tsx`; activates automatically once deployed on Vercel. Privacy page copy updated to reflect it (no cookies, aggregate traffic only)
 

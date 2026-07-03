@@ -168,7 +168,14 @@ export default function PrivacyPage() {
             >
               feedback form
             </Link>{" "}
-            on our homepage.
+            on our homepage. See also our{" "}
+            <Link
+              href="/terms"
+              className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+            >
+              Terms of Service
+            </Link>
+            .
           </p>
         </section>
       </div>
