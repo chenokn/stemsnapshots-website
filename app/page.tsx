@@ -95,12 +95,12 @@ export default function Home() {
               STEMSnapshots
             </p>
             <h1 className="mt-3 text-4xl font-bold text-slate-900 sm:text-5xl dark:text-white">
-              Educational apps for curious minds
+              Hands-on chemistry — build real compounds as you learn
             </h1>
             <p className="mt-5 text-lg text-slate-600 dark:text-slate-400">
-              We build offline-first desktop apps that make science tangible.
-              Our first release, Digital Lab, turns the periodic table into an
-              interactive chemistry lab.
+              Build your own 186 compounds with drag-and-drop chemistry,
+              watch atoms spin in a live animation, and hear the story
+              behind every element. All 118 elements, fully offline.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
               <a
