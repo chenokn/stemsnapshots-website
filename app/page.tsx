@@ -13,6 +13,7 @@ import type { IconType } from "react-icons";
 import ClickableScreenshot from "@/components/ClickableScreenshot";
 import FeedbackForm from "@/components/FeedbackForm";
 import NewsletterForm from "@/components/NewsletterForm";
+import BuyButton from "@/components/BuyButton";
 
 const FEATURES: {
   title: string;
@@ -218,46 +219,33 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-wrap items-center gap-4">
-            <div
-              aria-disabled="true"
-              className="relative flex cursor-not-allowed items-center gap-3 rounded-xl border border-slate-300 bg-white px-5 py-3 opacity-70 dark:border-white/15 dark:bg-white/[0.03]"
-            >
-              <span className="absolute -top-2.5 -right-2.5 rounded-full bg-slate-900 px-2 py-0.5 text-[10px] font-semibold text-white dark:bg-cyan-500 dark:text-slate-950">
-                Coming soon
-              </span>
-              <FaApple className="shrink-0 text-slate-900 dark:text-white" size={24} />
-              <span className="text-left leading-tight">
-                <span className="block text-[11px] text-slate-500 dark:text-slate-400">
-                  Download on the
-                </span>
-                <span className="block text-sm font-semibold text-slate-900 dark:text-white">
-                  Mac App Store
-                </span>
-              </span>
-            </div>
-            <div
-              aria-disabled="true"
-              className="relative flex cursor-not-allowed items-center gap-3 rounded-xl border border-slate-300 bg-white px-5 py-3 opacity-70 dark:border-white/15 dark:bg-white/[0.03]"
-            >
-              <span className="absolute -top-2.5 -right-2.5 rounded-full bg-slate-900 px-2 py-0.5 text-[10px] font-semibold text-white dark:bg-cyan-500 dark:text-slate-950">
-                Coming soon
-              </span>
-              <FaWindows className="shrink-0 text-slate-900 dark:text-white" size={22} />
-              <span className="text-left leading-tight">
-                <span className="block text-[11px] text-slate-500 dark:text-slate-400">
-                  Get it from
-                </span>
-                <span className="block text-sm font-semibold text-slate-900 dark:text-white">
-                  Microsoft Store
-                </span>
-              </span>
+          <div className="mt-16 rounded-2xl border border-slate-200 bg-white p-8 dark:border-white/10 dark:bg-white/[0.03]">
+            <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">
+                  Get Digital Lab
+                </p>
+                <p className="mt-2 text-slate-600 dark:text-slate-400">
+                  One-time purchase, unlocks the full Lab, Atom Build, and
+                  Ebooks. The periodic table itself is free to browse forever.
+                </p>
+                <p className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-slate-500 dark:text-slate-500 sm:justify-start">
+                  <span className="inline-flex items-center gap-1.5">
+                    <FaApple size={12} /> macOS
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <FaWindows size={12} /> Windows
+                  </span>
+                  <span>Linux</span>
+                </p>
+              </div>
+              <BuyButton />
             </div>
           </div>
 
           <div className="mt-8 max-w-md">
             <p className="text-sm font-semibold text-slate-900 dark:text-white">
-              Not live yet — want to know the moment it is?
+              Not ready to buy? Get notified about updates.
             </p>
             <div className="mt-3">
               <NewsletterForm />
@@ -299,10 +287,11 @@ export default function Home() {
             </div>
             <div className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-white/[0.03]">
               <p className="text-sm font-semibold text-slate-900 dark:text-white">
-                No account required
+                No account to use it
               </p>
               <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                Zero data collection, zero tracking. Just install and go.
+                The app itself needs no sign-in — buy once, activate with a
+                license key, and it works fully offline from then on.
               </p>
             </div>
           </div>

@@ -37,6 +37,12 @@ export default function Header() {
           >
             Privacy
           </Link>
+          <Link
+            href="/account"
+            className="transition-colors hover:text-slate-900 dark:hover:text-white"
+          >
+            My Account
+          </Link>
           <ThemeToggle />
         </nav>
       </div>
