@@ -6,14 +6,14 @@ import {
   FaAtom,
   FaHeadphones,
   FaClockRotateLeft,
-  FaApple,
-  FaWindows,
 } from "react-icons/fa6";
 import type { IconType } from "react-icons";
 import ClickableScreenshot from "@/components/ClickableScreenshot";
 import FeedbackForm from "@/components/FeedbackForm";
 import NewsletterForm from "@/components/NewsletterForm";
 import BuyButton from "@/components/BuyButton";
+import DownloadButtons from "@/components/DownloadButtons";
+import { getLatestRelease } from "@/lib/githubRelease";
 
 const FEATURES: {
   title: string;
@@ -85,7 +85,9 @@ const GALLERY: { title: string; image: string }[] = [
   { title: "Toxicity ratings", image: "/images/digital-lab-24.png" },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const release = await getLatestRelease();
+
   return (
     <>
       {/* Hero */}
@@ -226,18 +228,13 @@ export default function Home() {
                   Get Digital Lab
                 </p>
                 <p className="mt-2 text-slate-600 dark:text-slate-400">
-                  One-time purchase, unlocks the full Lab, Atom Build, and
-                  Ebooks. The periodic table itself is free to browse forever.
+                  Download for free — the periodic table is free to browse
+                  forever. Buy once to unlock the full Lab, Atom Build, and
+                  Ebooks.
                 </p>
-                <p className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-slate-500 dark:text-slate-500 sm:justify-start">
-                  <span className="inline-flex items-center gap-1.5">
-                    <FaApple size={12} /> macOS
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <FaWindows size={12} /> Windows
-                  </span>
-                  <span>Linux</span>
-                </p>
+                <div className="mt-4 flex justify-center sm:justify-start">
+                  <DownloadButtons release={release} />
+                </div>
               </div>
               <BuyButton />
             </div>
