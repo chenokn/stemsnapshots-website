@@ -13,6 +13,7 @@ import FeedbackForm from "@/components/FeedbackForm";
 import NewsletterForm from "@/components/NewsletterForm";
 import BuyButton from "@/components/BuyButton";
 import DownloadButtons from "@/components/DownloadButtons";
+import KidsApps from "@/components/KidsApps";
 import { getLatestRelease } from "@/lib/githubRelease";
 
 const FEATURES: {
@@ -329,6 +330,8 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      <KidsApps />
 
       {/* Feedback */}
       <section id="feedback" className="border-t border-slate-200 dark:border-white/10">

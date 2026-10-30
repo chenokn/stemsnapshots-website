@@ -18,7 +18,7 @@ export default function Header() {
             STEMSnapshots
           </span>
         </Link>
-        <nav className="flex items-center gap-4 text-sm text-slate-600 sm:gap-6 dark:text-slate-400">
+        <nav className="flex items-center gap-4 whitespace-nowrap text-sm text-slate-600 sm:gap-6 dark:text-slate-400">
           <Link
             href="/#digital-lab"
             className="transition-colors hover:text-slate-900 dark:hover:text-white"
@@ -26,14 +26,21 @@ export default function Header() {
             Digital Lab
           </Link>
           <Link
-            href="/#feedback"
+            href="/#kids-apps"
             className="transition-colors hover:text-slate-900 dark:hover:text-white"
+          >
+            Kids&rsquo; apps
+          </Link>
+          {/* Feedback and Privacy are in the footer too, so a phone shows the rest on one line. */}
+          <Link
+            href="/#feedback"
+            className="hidden transition-colors hover:text-slate-900 sm:inline dark:hover:text-white"
           >
             Feedback
           </Link>
           <Link
             href="/privacy"
-            className="transition-colors hover:text-slate-900 dark:hover:text-white"
+            className="hidden transition-colors hover:text-slate-900 sm:inline dark:hover:text-white"
           >
             Privacy
           </Link>
