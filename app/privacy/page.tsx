@@ -49,7 +49,7 @@ export default function PrivacyPage() {
             <li>the first name and avatar your child chooses</li>
             <li>the year group or phase they pick</li>
             <li>
-              lesson progress, quiz scores, stars and coins, badges and
+              lesson progress, quiz scores, coins, badges and
               certificates
             </li>
             <li>bookmarked words and recently viewed words</li>
